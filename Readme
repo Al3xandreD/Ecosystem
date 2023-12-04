@@ -1,0 +1,53 @@
+Fonctionnalités du jeu:
+
+-
+-Permettre au joueur d'acheter des animaux avec de l'argent
+
+
+Règles:
+-Le joueur gagne de l'argent si
+-Nombre de point déterminer par le nombre d'animaux posséder en fin de partie
+-Fin de partie si
+
+Représentation:
+-
+
+Implémentation
+-Un Joueur possède un ecosystème
+-Un ecosystem possède des resssources et des animaux
+
+Caractéristique des objets:
+    --Caractéristiques des animaux:
+        -méthodes:
+            -naitre
+            -se nourir(peut etre methode abstraite): a redefinir pour les classes animales
+            -mourir
+            -attaquer(predator seulement)
+            - les rapaces ne mangent que des cadavres
+
+        -attributs:
+            -stratégie d'attaque
+            -stratégie de défense: fight or fly
+            -barre de vie(représente son etat de santé)
+            -en mourant devient une ressource.
+
+
+    --Caractéristiques des desastres:
+        -possède une probabilité de se produire
+        -possède un effet
+
+
+    --Caractéristiques des joueurs
+
+    --Caractéristiques des ecosystèmes
+        -milieu définit: marin, terrien, aérien
+        -présence d'obstacle(buisson, rivière) cachant/bloquant les predateurs des proies
+        -taux d'humidité
+        -taux d'ensolleiment
+        -présence anthropique
+        -température
+
+
+
+
+
