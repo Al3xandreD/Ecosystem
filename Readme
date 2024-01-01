@@ -20,7 +20,7 @@ Caractéristique des objets:
     --Caractéristiques des animaux:
         -méthodes:
             -naitre
-            -se nourir(peut etre methode abstraite): a redefinir pour les classes animales
+            -se nourrir(peut etre methode abstraite): a redefinir pour les classes animales
             -mourir
             -attaquer(predator seulement)
             - les rapaces ne mangent que des cadavres
