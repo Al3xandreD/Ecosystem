@@ -41,11 +41,7 @@ Caractéristique des objets:
 
     --Caractéristiques des ecosystèmes
         -milieu définit: marin, terrien, aérien
-        -présence d'obstacle(buisson, rivière) cachant/bloquant les predateurs des proies
-        -taux d'humidité
-        -taux d'ensolleiment
-        -présence anthropique
-        -température
+        -arraylist pour les matrices animaux et ressurces car arraylist modifiable contrairement a array
 
 
 
