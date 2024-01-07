@@ -6,7 +6,7 @@ abstract public class Animal extends Element {
 
     public Animal(int maxLife,float pos_x, float pos_y) {
         super(pos_x, pos_y);
-        this.setMaxLife(maxLife);
+        this.maxLife=maxLife;
         this.life = this.getMaxLife();  // maximum life at birth
     }
 
@@ -14,8 +14,13 @@ abstract public class Animal extends Element {
         return this.life;
     }
 
-    public void setLife(int life) {
-        this.life = life;
+    public void setLife(int life) { //sets animal's life
+        if (life<this.getMaxLife()) {   //checks if not superior to maxlife when eating
+            this.life = life;
+        }
+        else{;
+            this.life=getMaxLife();
+        }
     }
 
     public int getMaxLife() {

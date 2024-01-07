@@ -1,6 +1,6 @@
 package org.example;
 
-public class Frog extends Animal{
+public class Frog extends Animal implements Eater{
     private static int maxLife = 50;
     ;
     private double orientation;
@@ -15,6 +15,12 @@ public class Frog extends Animal{
 
     public void setOrientation(double orientation) {
         this.orientation = orientation;
+    }
+
+    @Override
+    public void eat(Animal animal) {    //eats another animal such as a fly
+        this.setLife(this.getLife()+animal.getLife());
+        animal.setLife(0);
     }
 
     @Override

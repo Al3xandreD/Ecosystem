@@ -7,12 +7,15 @@ import java.util.Random;
 
 public class Ecosys {
     //attributs regarding animals
+    private String month;
     private int nb_frog;  //number of frogs
     private int nb_fly; // number of flies
-
     private int nb_res; // number of ressources
+    private int nb_intru; //number oof intrudors
     private ArrayList<ArrayList<Ressource>> tabRes = new ArrayList<ArrayList<Ressource>>(nb_res); // ressouces contained in the environement
     private ArrayList<ArrayList<Animal>> tabAni = new ArrayList<ArrayList<Animal>>();    //animals contained in the ecosystem
+    private ArrayList<Intrudor> tabIntru = new ArrayList<>(nb_intru);
+    private Intrudor intru;
     private int length;
     private int height;
 
@@ -23,6 +26,7 @@ public class Ecosys {
         this.nb_frog=nb_frog;
         this.nb_fly=nb_fly;
         this.nb_res=nb_res;
+
 
         // init arrays
         ArrayList<Animal> fly_array=new ArrayList<Animal>();
@@ -45,6 +49,10 @@ public class Ecosys {
             frog_array.add(new Frog(pos_x,pos_y,orientation));
         }
         this.tabAni.add(frog_array);
+
+        this.intru=new Intrudor();
+
+        this.month=this.intru.getHuntPeriod();
     }
 
     @Override
@@ -114,5 +122,29 @@ public class Ecosys {
 
     public void setHeight(int height) {
         this.height = height;
+    }
+
+    public String getMonth() {
+        return month;
+    }
+
+    public void setMonth(String month) {
+        this.month = month;
+    }
+
+    public int getNb_intru() {
+        return nb_intru;
+    }
+
+    public void setNb_intru(int nb_intru) {
+        this.nb_intru = nb_intru;
+    }
+
+    public ArrayList<Intrudor> getTabIntru() {
+        return tabIntru;
+    }
+
+    public void setTabIntru(ArrayList<Intrudor> tabIntru) {
+        this.tabIntru = tabIntru;
     }
 }

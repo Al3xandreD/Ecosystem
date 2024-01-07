@@ -5,9 +5,9 @@ Fonctionnalités du jeu:
 
 
 Règles:
--Le joueur gagne de l'argent si
+
 -Nombre de point déterminer par le nombre d'animaux posséder en fin de partie
--Fin de partie si
+-Fin de partie si battu par un attaquant
 
 Représentation:
 -
@@ -19,17 +19,12 @@ Implémentation
 Caractéristique des objets:
     --Caractéristiques des animaux:
         -méthodes:
-            -naitre
-            -se nourrir(peut etre methode abstraite): a redefinir pour les classes animales
-            -mourir
-            -attaquer(predator seulement)
-            - les rapaces ne mangent que des cadavres
+            -manger-> nécessite une interface, car fly ne mange pas
 
         -attributs:
-            -stratégie d'attaque
-            -stratégie de défense: fight or fly
-            -barre de vie(représente son etat de santé)
-            -en mourant devient une ressource.
+            -max de vie
+            -vie(représente son etat de santé)
+
 
 
     --Caractéristiques des desastres:
@@ -41,7 +36,7 @@ Caractéristique des objets:
 
     --Caractéristiques des ecosystèmes
         -milieu définit: marin, terrien, aérien
-        -arraylist pour les matrices animaux et ressurces car arraylist modifiable contrairement a array
+        -arraylist pour les matrices animaux et ressources car arraylist modifiable contrairement a array
 
 
 
